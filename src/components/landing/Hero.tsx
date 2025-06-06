@@ -50,12 +50,12 @@ export const Hero = () => {
   return (
     <section 
       ref={containerRef}
-      className="flex w-full flex-col items-center justify-center py-[50px] relative overflow-hidden px-5 md:px-[120px]"
+      className="flex w-full flex-col items-center justify-center py-[50px] max-md:py-[10px] relative overflow-hidden px-5 md:px-[120px]"
     >
       <div className="flex w-full max-w-[1400px] items-center gap-10 md:gap-20 max-md:flex-col">
         <div className="flex w-full flex-col justify-center flex-1 max-w-[700px] min-w-[560px] max-md:min-w-0 max-md:max-w-full">
           <div className="w-full text-[#151357]">
-            <h1 className="text-[#151357] text-[52px] font-bold leading-[62px] mt-4 max-md:max-w-full max-md:text-[40px] max-md:leading-[52px]">
+            <h1 className="text-[#151357] text-[52px] font-bold leading-[62px] mt-4 max-md:max-w-full max-md:text-[34px] max-md:leading-[40px]">
               Stop Dreading RFPs.
               <span className="text-[#5E5ADB] block">Start Winning Them.</span>
             </h1>

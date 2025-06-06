@@ -45,7 +45,7 @@ export const Header = () => {
         </button>
       </nav>
       
-      <div className="ml-auto flex items-center gap-4">
+      <div className="ml-auto flex items-center gap-4 max-md:hidden">
         <Button 
           variant="outline" 
           className="text-[#5E5ADB] border-[#5E5ADB] hover:bg-[#5E5ADB] hover:text-white"
