@@ -66,14 +66,14 @@ export const Hero = () => {
           </p>
           <div className="flex items-center gap-5 text-sm font-medium tracking-[0.28px] leading-none mt-10 max-md:flex-wrap max-md:gap-3">
             <Button 
-              className="text-white self-stretch shadow-[0px_1px_1px_0px_rgba(0,0,0,0.10),0px_0px_0px_1px_#5E5ADB] min-h-[50px] gap-2 overflow-hidden bg-[#5E5ADB] my-auto px-6 py-[15px] rounded-md text-lg max-md:text-base max-md:px-4"
+              className="text-white self-stretch shadow-[0px_1px_1px_0px_rgba(0,0,0,0.10),0px_0px_0px_1px_#5E5ADB] min-h-[50px] gap-2 overflow-hidden bg-[#5E5ADB] my-auto px-6 py-[15px] rounded-md text-lg max-md:text-base max-md:px-4 flex-1 max-md:flex-none"
               onClick={() => window.location.href = 'https://app.full-fill.ai/register'}
             >
               Start Your Free Trial
             </Button>
             <Button 
               variant="outline"
-              className="text-[#464F60] self-stretch shadow-[0px_1px_1px_0px_rgba(0,0,0,0.10),0px_0px_0px_1px_rgba(70,79,96,0.16)] min-h-[50px] gap-2 overflow-hidden bg-white my-auto px-6 py-[15px] rounded-md text-lg max-md:text-base max-md:px-4"
+              className="text-[#464F60] self-stretch shadow-[0px_1px_1px_0px_rgba(0,0,0,0.10),0px_0px_0px_1px_rgba(70,79,96,0.16)] min-h-[50px] gap-2 overflow-hidden bg-white my-auto px-6 py-[15px] rounded-md text-lg max-md:text-base max-md:px-4 flex-1 max-md:flex-none"
               onClick={() => scrollToSection('how-it-works')}
             >
               See How It Works

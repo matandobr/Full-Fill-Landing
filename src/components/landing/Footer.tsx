@@ -19,9 +19,9 @@ export const Footer = () => {
       { name: 'Contact', href: '/contact' },
     ],
     legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' },
+      { name: 'Privacy Policy', href: '/documents/Privacy Policy.pdf' },
+      { name: 'Terms of Service', href: '/documents/Terms of Service.pdf' },
+      { name: 'Cookie Policy', href: '/documents/Cookie Policy.pdf' },
     ],
   };
 
@@ -45,13 +45,15 @@ export const Footer = () => {
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               {footerLinks.legal.map((link, index) => (
-                <Link
+                <a
                   key={index}
-                  to={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm hover:text-white transition-colors"
                 >
                   {link.name}
-                </Link>
+                </a>
               ))}
             </div>
           </div>

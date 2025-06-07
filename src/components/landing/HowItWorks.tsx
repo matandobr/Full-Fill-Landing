@@ -15,7 +15,7 @@ export function HowItWorks() {
     },
     { 
       icon: FileOutput, 
-      title: "3. Perfect & Ship", 
+      title: "3. Review & Submit", 
       description: "Review the AI-generated responses, make edits where needed, and regenerate specific answers. Export in your preferred format when ready." 
     }
   ];
