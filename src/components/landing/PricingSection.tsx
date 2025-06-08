@@ -25,7 +25,7 @@ export function PricingSection() {
     },
     {
       name: "Pro",
-      price: isYearly ? "720" : "80",
+      price: isYearly ? "620" : "69",
       description: "Get the most out of Full-Fill",
       features: [
         "2 Questionnaires per month",
