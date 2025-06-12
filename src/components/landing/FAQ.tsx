@@ -22,12 +22,33 @@ const faqs = [
   {
     question: "Do you offer a free trial?",
     answer: "Yes, we offer a free trial period to test our platform's capabilities and features."
+  },
+  {
+    question: "Where do I buy the licenses?",
+    answer: "After registering for the free trial, you can upgrade to a paid plan by clicking on the \"Upgrade to Pro\" option in the profile menu within your account dashboard."
   }
 ];
 
 export const FAQ = () => {
   return (
-    <section className="flex w-full flex-col items-stretch px-[120px] pt-[60px] pb-8 max-md:max-w-full max-md:px-5">
+    <section id="faq" className="flex w-full flex-col items-stretch px-[120px] pt-[60px] pb-8 max-md:max-w-full max-md:px-5">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })
+        }}
+      />
       <div className="flex w-full flex-col items-center text-[#151357] max-md:max-w-full">
         <div className="flex flex-col items-center max-md:max-w-full">
           <h2 className="text-[#151357] text-center text-[40px] font-bold leading-[1.2] mt-4 max-md:max-w-full">

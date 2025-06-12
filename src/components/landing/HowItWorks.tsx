@@ -22,6 +22,37 @@ export function HowItWorks() {
 
   return (
     <section id="how-it-works" className="py-16 md:py-24 bg-[#F7F9FC]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "name": "How to Use Full-Fill for RFP Responses",
+            "description": "Get winning RFP responses in 3 simple steps with AI-powered automation",
+            "step": [
+              {
+                "@type": "HowToStep",
+                "position": 1,
+                "name": "Teach Your AI",
+                "text": "Upload your technical documentation and previously completed RFPs/RFIs. This creates your AI's knowledge foundation for generating accurate responses."
+              },
+              {
+                "@type": "HowToStep",
+                "position": 2,
+                "name": "Let AI Work",
+                "text": "Upload any new questionnaire in any format. Our AI instantly generates answers by matching questions with your existing knowledge base."
+              },
+              {
+                "@type": "HowToStep",
+                "position": 3,
+                "name": "Review & Submit",
+                "text": "Review the AI-generated responses, make edits where needed, and regenerate specific answers. Export in your preferred format when ready."
+              }
+            ]
+          })
+        }}
+      />
       <div className="max-w-[1400px] mx-auto px-[120px] max-md:px-5">
         <div className="text-center mb-12 max-w-3xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Get Winning RFP Responses in 3 Simple Steps</h2>

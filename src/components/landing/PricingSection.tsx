@@ -56,6 +56,59 @@ export function PricingSection() {
 
   return (
     <section id="pricing" className="py-16 md:py-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Full-Fill AI RFP Response Platform",
+            "description": "AI-powered platform for responding to RFPs, RFIs, and technical questionnaires",
+            "brand": {
+              "@type": "Brand",
+              "name": "Full-Fill"
+            },
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "Free Trial",
+                "price": "0",
+                "priceCurrency": "USD",
+                "description": "30-day free trial with no credit card required",
+                "eligibleQuantity": {
+                  "@type": "QuantitativeValue",
+                  "value": "2",
+                  "unitText": "questionnaires"
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Pro Plan",
+                "price": isYearly ? "620" : "69",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": isYearly ? "620" : "69",
+                  "priceCurrency": "USD",
+                  "billingIncrement": isYearly ? "P1Y" : "P1M"
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Enterprise Plan",
+                "price": isYearly ? "2700" : "300",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": isYearly ? "2700" : "300",
+                  "priceCurrency": "USD",
+                  "billingIncrement": isYearly ? "P1Y" : "P1M"
+                }
+              }
+            ]
+          })
+        }}
+      />
       <div className="max-w-[1400px] mx-auto px-[120px] max-md:px-5">
         <div className="text-center mb-12 max-w-3xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>

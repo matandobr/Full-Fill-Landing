@@ -95,9 +95,11 @@ export const Hero = () => {
           <img 
             ref={imageRef}
             src="/screenshots/questionnaire.jpeg" 
-            alt="Questionnaire interface preview"
+            alt="Full-Fill AI questionnaire interface showing RFP response automation and document analysis capabilities for sales engineers and presales teams"
             style={{ width: `${imageWidth}px` }}
             className="h-auto rounded-lg shadow-2xl"
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
       </div>

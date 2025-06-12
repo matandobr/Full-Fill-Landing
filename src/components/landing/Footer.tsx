@@ -22,6 +22,7 @@ export const Footer = () => {
       { name: 'Privacy Policy', href: '/documents/Privacy Policy.pdf' },
       { name: 'Terms of Service', href: '/documents/Terms of Service.pdf' },
       { name: 'Cookie Policy', href: '/documents/Cookie Policy.pdf' },
+      { name: 'Refund Policy', href: '/documents/refund_policy.pdf' },
     ],
   };
 

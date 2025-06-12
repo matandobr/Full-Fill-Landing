@@ -17,8 +17,10 @@ export const Header = () => {
       <div className="flex-shrink-0 flex items-center gap-3">
         <img 
           src="/only_logo.svg" 
-          alt="Full-Fill Logo" 
+          alt="Full-Fill - AI-powered RFP response automation platform logo" 
           className="h-10 w-auto"
+          width="40"
+          height="40"
         />
          {/* <span className="text-[#151357] text-3xl font-bold">Full-Fill</span> */}
         <span className="text-[#151357] text-3xl font-['Helvetica_Neue_Condensed']">Full-Fill</span>
