@@ -1,0 +1,25 @@
+{
+  "name": "Full-Fill - AI-Powered RFP Response Platform",
+  "short_name": "Full-Fill",
+  "description": "AI-powered platform for responding to RFPs, RFIs, and technical questionnaires 5x faster",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#5E5ADB",
+  "categories": ["business", "productivity", "ai"],
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "lang": "en",
+  "scope": "/",
+  "orientation": "portrait-primary"
+} 
