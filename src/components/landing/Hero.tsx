@@ -1,12 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Clock, CheckCircle } from "lucide-react";
 
 export const Hero = () => {
-  const [imageWidth, setImageWidth] = useState(800);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLImageElement>(null);
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -17,39 +13,8 @@ export const Hero = () => {
     }
   };
 
-  useEffect(() => {
-    const updateImageWidth = () => {
-      if (containerRef.current && imageRef.current) {
-        const containerWidth = containerRef.current.offsetWidth;
-        const viewportWidth = window.innerWidth;
-        
-        // Base width calculations
-        let newWidth = 800; // Default width
-        
-        if (viewportWidth >= 1920) { // 2xl
-          newWidth = 1100;
-        } else if (viewportWidth >= 1280) { // xl
-          newWidth = 900;
-        } else if (viewportWidth >= 1024) { // lg
-          newWidth = 800;
-        } else if (viewportWidth >= 768) { // md
-          newWidth = Math.min(containerWidth - 40, 700); // 40px for padding
-        } else { // mobile
-          newWidth = containerWidth - 40; // Full width minus padding
-        }
-        
-        setImageWidth(newWidth);
-      }
-    };
-
-    updateImageWidth();
-    window.addEventListener('resize', updateImageWidth);
-    return () => window.removeEventListener('resize', updateImageWidth);
-  }, []);
-
   return (
     <section 
-      ref={containerRef}
       className="flex w-full flex-col items-center justify-center py-[50px] max-md:py-[10px] relative overflow-hidden px-5 md:px-[120px]"
     >
       <div className="flex w-full max-w-[1400px] items-center gap-10 md:gap-20 max-md:flex-col">
@@ -91,13 +56,11 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="flex-shrink-0 max-md:w-full max-md:mt-8">
+        <div className="flex-1 max-w-[800px] w-full max-md:mt-8">
           <img 
-            ref={imageRef}
             src="/screenshots/questionnaire.jpeg" 
             alt="Full-Fill AI questionnaire interface showing RFP response automation and document analysis capabilities for sales engineers and presales teams"
-            style={{ width: `${imageWidth}px` }}
-            className="h-auto rounded-lg shadow-2xl"
+            className="w-full h-auto rounded-lg shadow-2xl"
             loading="eager"
             fetchPriority="high"
           />
