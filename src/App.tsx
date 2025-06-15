@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { CookieConsent } from "@/components/landing/CookieConsent";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import { MicrosoftClarity } from "@/components/analytics/MicrosoftClarity";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <GoogleAnalytics />
+      <MicrosoftClarity />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />

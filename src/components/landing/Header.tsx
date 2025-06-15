@@ -28,6 +28,12 @@ export const Header = () => {
       
       <nav className="hidden lg:flex items-center gap-8 xl:gap-10 text-[#222834] font-semibold text-center tracking-[0.28px] absolute left-1/2 transform -translate-x-1/2">
         <button 
+          onClick={() => scrollToSection('features')}
+          className="hover:text-[#5E5ADB] transition-colors cursor-pointer whitespace-nowrap text-lg"
+        >
+          Features
+        </button>
+        <button 
           onClick={() => scrollToSection('how-it-works')}
           className="hover:text-[#5E5ADB] transition-colors cursor-pointer whitespace-nowrap text-lg"
         >
