@@ -18,7 +18,7 @@ export const Hero = () => {
       className="flex w-full flex-col items-center justify-center py-[50px] max-md:py-[10px] relative overflow-hidden px-5 md:px-[120px]"
     >
       <div className="flex w-full max-w-[1400px] items-center gap-10 md:gap-20 max-md:flex-col">
-        <div className="flex w-full flex-col justify-center flex-1 max-w-[700px] min-w-[560px] max-md:min-w-0 max-md:max-w-full">
+        <div className="w-full lg:w-2/5 flex flex-col justify-center min-w-0 max-md:max-w-full">
           <div className="w-full text-[#151357]">
             <h1 className="text-[#151357] text-[52px] font-bold leading-[62px] mt-4 max-md:max-w-full max-md:text-[34px] max-md:leading-[40px]">
               Stop Dreading RFPs.
@@ -46,17 +46,13 @@ export const Hero = () => {
           </div>
           <div className="flex items-center gap-4 mt-6 text-base text-[#222834] max-md:flex-col max-md:items-start max-md:gap-4 max-md:text-sm">
             <div className="flex items-center gap-2">
-              <Clock className="w-3 h-4 text-[#5E5ADB]" />
-              <span>Save 80% of RFP response time</span>
-            </div>
-            <div className="flex items-center gap-2">
               <CheckCircle className="w-3 h-4 text-[#5E5ADB]" />
-              <span>Free trial with no credit card required</span>
+              <span>No credit card required</span>
             </div>
           </div>
         </div>
 
-        <div className="flex-1 max-w-[800px] w-full max-md:mt-8">
+        <div className="w-full lg:w-3/5 max-md:mt-8">
           <img 
             src="/screenshots/questionnaire.jpeg" 
             alt="Full-Fill AI questionnaire interface showing RFP response automation and document analysis capabilities for sales engineers and presales teams"

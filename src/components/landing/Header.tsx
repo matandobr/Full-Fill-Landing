@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const scrollToSection = (sectionId: string) => {
@@ -45,6 +46,12 @@ export const Header = () => {
         >
           Pricing
         </button>
+        <Link 
+          to="/blog"
+          className="hover:text-[#5E5ADB] transition-colors cursor-pointer whitespace-nowrap text-lg"
+        >
+          Blog
+        </Link>
         <button 
           onClick={() => scrollToSection('faq')}
           className="hover:text-[#5E5ADB] transition-colors cursor-pointer whitespace-nowrap text-lg"
