@@ -19,15 +19,4 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  build: {
-    rollupOptions: {
-      input: {
-        main: path.resolve(__dirname, 'index.html'),
-        'entry-server': path.resolve(__dirname, 'src/entry-server.tsx'),
-      },
-    },
-  },
-  ssr: {
-    noExternal: ['react-router-dom'],
-  },
 }));

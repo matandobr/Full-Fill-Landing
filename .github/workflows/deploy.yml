@@ -1,29 +1,35 @@
-name: Deploy to AWS Lightsail using PEM
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+
+permissions:
+  contents: write
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Set up Lightsail PEM SSH Key
-      run: |
-        mkdir -p ~/.ssh
-        echo "${{ secrets.LIGHTSAIL_PEM_KEY }}" > ~/.ssh/lightsail.pem
-        chmod 600 ~/.ssh/lightsail.pem
-        ssh-keyscan -p ${{ secrets.LIGHTSAIL_PORT }} -H ${{ secrets.LIGHTSAIL_HOST }} >> ~/.ssh/known_hosts
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
 
-    - name: Deploy to Lightsail via SSH
-      run: |
-        ssh -i ~/.ssh/lightsail.pem -p ${{ secrets.LIGHTSAIL_PORT }} ${{ secrets.LIGHTSAIL_HOST }} << 'EOF'
-          cd /home/ubuntu/Full-Fill
-          git pull origin main
-          npm install
-          pm2 restart app
-        EOF
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
+          branch: gh-pages
+          clean: true
