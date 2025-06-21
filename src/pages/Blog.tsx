@@ -79,7 +79,7 @@ export const Blog = () => {
               Full-Fill Blog
             </h1>
             <p className="text-[#222834] text-xl max-w-3xl mx-auto">
-              Insights, tips, and updates on RFP automation, sales engineering, and AI-powered solutions.
+              Insights, tips, and updates on Customer Questionnaires automation, sales engineering, and AI-powered solutions.
             </p>
           </div>
 

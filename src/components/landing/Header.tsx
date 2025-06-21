@@ -15,17 +15,17 @@ export const Header = () => {
 
   return (
     <header className="flex w-full items-center text-base leading-none px-4 sm:px-8 md:px-[120px] py-6 max-md:max-w-full relative">
-      <div className="flex-shrink-0 flex items-center gap-3">
+      <Link to="/" className="flex-shrink-0 flex items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer">
         <img 
           src="/only_logo.svg" 
-          alt="Full-Fill - AI-powered RFP response automation platform logo" 
+          alt="Full-Fill - AI-powered Customer Questionnaire response automation platform logo" 
           className="h-10 w-auto"
           width="40"
           height="40"
         />
          {/* <span className="text-[#151357] text-3xl font-bold">Full-Fill</span> */}
         <span className="text-[#151357] text-3xl font-['Helvetica_Neue_Condensed']">Full-Fill</span>
-      </div>
+      </Link>
       
       <nav className="hidden lg:flex items-center gap-8 xl:gap-10 text-[#222834] font-semibold text-center tracking-[0.28px] absolute left-1/2 transform -translate-x-1/2">
         {/* <button 

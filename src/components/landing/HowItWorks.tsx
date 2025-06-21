@@ -6,7 +6,7 @@ export function HowItWorks() {
     { 
       icon: UploadCloud, 
       title: "1. Teach Your AI", 
-      description: "Upload your technical documentation and previously completed RFPs/RFIs. This creates your AI's knowledge foundation for generating accurate responses." 
+      description: "Upload your technical documentation and previously filled Questionnaires, RFPs and RFIs. This creates your AI's knowledge foundation for generating accurate responses." 
     },
     { 
       icon: Lightbulb, 
@@ -28,14 +28,14 @@ export function HowItWorks() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "HowTo",
-            "name": "How to Use Full-Fill for RFP Responses",
-            "description": "Get winning RFP responses in 3 simple steps with AI-powered automation",
+            "name": "How to Use Full-Fill for Questionnaire Responses",
+            "description": "Get winning Questionnaire responses in 3 simple steps with AI-powered automation",
             "step": [
               {
                 "@type": "HowToStep",
                 "position": 1,
                 "name": "Teach Your AI",
-                "text": "Upload your technical documentation and previously completed RFPs/RFIs. This creates your AI's knowledge foundation for generating accurate responses."
+                "text": "Upload your technical documentation and previously completed Questionnaires, RFPs and RFIs. This creates your AI's knowledge foundation for generating accurate responses."
               },
               {
                 "@type": "HowToStep",
@@ -55,8 +55,8 @@ export function HowItWorks() {
       />
       <div className="max-w-[1400px] mx-auto px-[120px] max-md:px-5">
         <div className="text-center mb-12 max-w-3xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Get Winning RFP Responses in 3 Simple Steps</h2>
-          <p className="text-lg text-gray-600">Transform your RFP process with AI-powered responses based on your existing knowledge.</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Get Winning Responses in 3 Simple Steps</h2>
+          <p className="text-lg text-gray-600">Transform your manual process with AI-powered responses based on your existing knowledge.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-8 md:gap-12 max-w-6xl mx-auto">
           {steps.map((step, index) => (

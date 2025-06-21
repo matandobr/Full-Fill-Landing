@@ -62,8 +62,8 @@ export function PricingSection() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Product",
-            "name": "Full-Fill AI RFP Response Platform",
-            "description": "AI-powered platform for responding to RFPs, RFIs, and technical questionnaires",
+            "name": "Full-Fill AI Questionnaire Response Platform",
+            "description": "AI-powered platform for responding to customer Questionnaires, RFPs and RFIs",
             "brand": {
               "@type": "Brand",
               "name": "Full-Fill"

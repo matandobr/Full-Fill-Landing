@@ -8,10 +8,10 @@ export const ContactForm = () => {
       <div className="max-w-[1400px] mx-auto px-[120px] max-md:px-5 text-center">
         <Briefcase className="w-16 h-16 text-[#5E5ADB] mx-auto mb-6"/>
         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-          Ready to Transform Your RFP Process?
+        Stop Copy-Pasting Questionnaire Answers
         </h2>
         <p className="text-lg text-white/90 max-w-2xl mx-auto mb-10">
-          Stop wasting time on manual RFP work. Start winning more deals with Full-Fill's intelligent automation.
+        Full-Fill automates customer questionnaires using AI - <b>saving you hours</b> on every response. Start winning more deals with Full-Fill today.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
           <Button 

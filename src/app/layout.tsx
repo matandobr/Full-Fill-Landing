@@ -6,9 +6,9 @@ import { CookieConsent } from "@/components/landing/CookieConsent";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Full-Fill - Stop Dreading RFPs. Start Winning Them.",
-  description: "Full-Fill helps sales engineers and presales teams respond to RFPs, RFIs, and technical questionnaires 5x faster with AI-powered draft responses based on your existing content.",
-  keywords: "RFP response, RFI automation, technical questionnaire, AI-powered responses, sales engineering, presales, proposal automation, response management, bid management, AI sales tools",
+  title: "Full-Fill - Questionnaires, RFPs, and RFIs, AI-Powered Answers",
+  description: "Full-Fill helps sales engineers and presales teams respond to Technical questionnaires, RFPs and RFIs, 5x faster with AI-powered draft responses based on your existing content.",
+  keywords: "Questionnaire automation, Customer Questionnaire, RFP response, RFI automation, technical questionnaire, AI-powered responses, sales engineering, presales, proposal automation, response management, bid management, AI sales tools",
   authors: [{ name: "Full-Fill" }],
   creator: "Full-Fill",
   publisher: "Full-Fill",
@@ -31,14 +31,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://full-fill.ai",
     siteName: "Full-Fill",
-    title: "Full-Fill - Stop Dreading RFPs. Start Winning Them.",
-    description: "Full-Fill helps sales engineers and presales teams respond to RFPs, RFIs, and technical questionnaires 5x faster with AI-powered draft responses based on your existing content.",
+    title: "Full-Fill - Questionnaires, RFPs, and RFIs, AI-Powered Answers",
+    description: "Full-Fill helps sales engineers and presales teams respond to Technical questionnaires, RFPs and RFIs, 5x faster with AI-powered draft responses based on your existing content.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Full-Fill - AI-Powered RFP Response Platform",
+        alt: "Full-Fill - AI-Powered Customer Questionnaire Response Platform",
       },
     ],
   },
@@ -46,8 +46,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@FullFillAI",
     creator: "@FullFillAI",
-    title: "Full-Fill - Stop Dreading RFPs. Start Winning Them.",
-    description: "Full-Fill helps sales engineers and presales teams respond to RFPs, RFIs, and technical questionnaires 5x faster with AI-powered draft responses.",
+    title: "Full-Fill - Questionnaires, RFPs, and RFIs, AI-Powered Answers",
+    description: "Full-Fill helps sales engineers and presales teams respond to Technical questionnaires, RFPs and RFIs, 5x faster with AI-powered draft responses based on your existing content.",
     images: ["/twitter-image.jpg"],
   },
   alternates: {
@@ -85,7 +85,7 @@ export default function RootLayout({
               "@type": "SoftwareApplication",
               "name": "Full-Fill",
               "url": "https://full-fill.ai",
-              "description": "AI-powered platform for responding to RFPs, RFIs, and technical questionnaires 5x faster",
+              "description": "AI-powered platform for responding to Customer Questionnaires, RFPs and RFIs, 5x faster",
               "applicationCategory": "BusinessApplication",
               "operatingSystem": "Web",
               "offers": {
