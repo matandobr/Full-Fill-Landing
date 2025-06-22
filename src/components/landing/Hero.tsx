@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Clock, CheckCircle } from "lucide-react";
+import { Clock, CheckCircle, Calendar } from "lucide-react";
 
 export const Hero = () => {
   const [imageWidth, setImageWidth] = useState(800);
@@ -74,9 +74,10 @@ export const Hero = () => {
             <Button 
               variant="outline"
               className="text-[#464F60] self-stretch shadow-[0px_1px_1px_0px_rgba(0,0,0,0.10),0px_0px_0px_1px_rgba(70,79,96,0.16)] min-h-[50px] gap-2 overflow-hidden bg-white my-auto px-6 py-[15px] rounded-md text-lg max-md:text-base max-md:px-4 flex-1 max-md:flex-none"
-              onClick={() => scrollToSection('how-it-works')}
+              onClick={() => window.open('https://calendly.com/matan-full-fill/30min?month=2025-06', '_blank')}
             >
-              See How It Works
+              <Calendar className="w-4 h-4 mr-2" />
+              Book a Demo
             </Button>
           </div>
           <div className="flex items-center gap-4 mt-6 text-base text-[#222834] max-md:flex-col max-md:items-start max-md:gap-4 max-md:text-sm">
