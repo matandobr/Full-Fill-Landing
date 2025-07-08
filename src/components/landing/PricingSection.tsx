@@ -25,14 +25,13 @@ export function PricingSection() {
     },
     {
       name: "Pro",
-      price: isYearly ? "620" : "69",
+      price: isYearly ? "950" : "99",
       description: "Get the most out of Full-Fill",
       features: [
         "2 Questionnaires per month",
         "25 Knowledgebase files",
         "Unlimited answers",
-        "Email + Support tickets",
-        "1 feature request per month"
+        "Organization setup",
       ],
       buttonText: "Start Free Trial",
       highlighted: true,
@@ -40,16 +39,16 @@ export function PricingSection() {
     },
     {
       name: "Enterprise",
-      price: isYearly ? "2700" : "300",
-      description: "For demanding organizations",
+      price: null,
+      description: "Custom solution tailored to your needs",
       features: [
-        "5 Questionnaires per month",
-        "100 Knowledgebase files",
+        "Unlimited Questionnaires",
+        "Unlimited Knowledgebase files",
         "Premium support",
         "Dedicated Customer Success Manager",
         "SSO"
       ],
-      buttonText: "Start Free Trial",
+      buttonText: "Contact Sales",
       highlighted: false
     }
   ];
@@ -84,11 +83,11 @@ export function PricingSection() {
               {
                 "@type": "Offer",
                 "name": "Pro Plan",
-                "price": isYearly ? "620" : "69",
+                "price": isYearly ? "950" : "99",
                 "priceCurrency": "USD",
                 "priceSpecification": {
                   "@type": "PriceSpecification",
-                  "price": isYearly ? "620" : "69",
+                  "price": isYearly ? "950" : "99",
                   "priceCurrency": "USD",
                   "billingIncrement": isYearly ? "P1Y" : "P1M"
                 }
@@ -96,14 +95,9 @@ export function PricingSection() {
               {
                 "@type": "Offer",
                 "name": "Enterprise Plan",
-                "price": isYearly ? "2700" : "300",
+                "price": null,
                 "priceCurrency": "USD",
-                "priceSpecification": {
-                  "@type": "PriceSpecification",
-                  "price": isYearly ? "2700" : "300",
-                  "priceCurrency": "USD",
-                  "billingIncrement": isYearly ? "P1Y" : "P1M"
-                }
+                "description": "Custom solution tailored to your needs"
               }
             ]
           })
@@ -121,7 +115,7 @@ export function PricingSection() {
               checked={isYearly}
               onCheckedChange={setIsYearly}
             />
-            <Label htmlFor="billing-toggle" className="text-gray-600">Yearly (Save 25%)</Label>
+            <Label htmlFor="billing-toggle" className="text-gray-600">Yearly (Save 20%)</Label>
           </div>
         </div>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -142,9 +136,15 @@ export function PricingSection() {
               <div className="mb-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-4xl font-bold text-gray-900">${plan.price}</span>
-                  {plan.name !== "Free Trial" && (
-                    <span className="text-gray-600">/{isYearly ? 'year' : 'month'}</span>
+                  {plan.price !== null ? (
+                    <>
+                      <span className="text-4xl font-bold text-gray-900">${plan.price}</span>
+                      {plan.name !== "Free Trial" && (
+                        <span className="text-gray-600">/{isYearly ? 'year' : 'month'}</span>
+                      )}
+                    </>
+                  ) : (
+                    <span className="text-2xl font-bold text-gray-900"></span>
                   )}
                 </div>
                 <p className="text-gray-600 mt-2">{plan.description}</p>
@@ -164,7 +164,13 @@ export function PricingSection() {
                     : 'bg-white text-[#5E5ADB] border-[#5E5ADB] hover:bg-[#5E5ADB] hover:text-white'
                 }`}
                 variant={plan.highlighted ? "default" : "outline"}
-                onClick={() => window.location.href = 'https://app.full-fill.ai/register'}
+                onClick={() => {
+                  if (plan.name === "Enterprise") {
+                    window.open('https://calendly.com/matan-full-fill/30min?month=2025-06', '_blank');
+                  } else {
+                    window.location.href = 'https://app.full-fill.ai/register';
+                  }
+                }}
               >
                 {plan.buttonText}
               </Button>
