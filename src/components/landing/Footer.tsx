@@ -1,4 +1,3 @@
-import React from 'react';
 import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -19,10 +18,10 @@ export const Footer = () => {
       { name: 'Contact', href: '/contact' },
     ],
     legal: [
-      { name: 'Privacy Policy', href: '/documents/Privacy Policy.pdf' },
-      { name: 'Terms of Service', href: '/documents/Terms of Service.pdf' },
-      { name: 'Cookie Policy', href: '/documents/Cookie Policy.pdf' },
-      { name: 'Refund Policy', href: '/documents/refund_policy.pdf' },
+      { name: 'Privacy Policy', href: '/privacy-policy' },
+      { name: 'Terms of Service', href: '/terms-of-service' },
+      { name: 'Cookie Policy', href: '/cookie-policy' },
+      { name: 'Refund Policy', href: '/refund-policy' },
     ],
   };
 
@@ -46,15 +45,13 @@ export const Footer = () => {
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               {footerLinks.legal.map((link, index) => (
-                <a
+                <Link
                   key={index}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  to={link.href}
                   className="text-sm hover:text-white transition-colors"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
